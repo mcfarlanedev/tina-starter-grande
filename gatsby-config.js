@@ -23,7 +23,18 @@ module.exports = {
             },
           },
         },
-        plugins: ["gatsby-tinacms-git", "gatsby-tinacms-remark"],
+        plugins: ["gatsby-tinacms-remark"],
+      },
+    },
+    {
+      resolve: "gatsby-tinacms-git",
+      options: {
+        pathToRepo: process.cwd(),
+        pathToContent: "",
+        defaultCommitMessage: "chore: update from tina",
+        defaultCommitName: "TinaCMS",
+        defaultCommitEmail: "git@tinacms.org",
+        pushOnCommit: false,
       },
     },
     {

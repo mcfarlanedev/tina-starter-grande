@@ -73,7 +73,10 @@ const PageForm = {
           label: "Image",
           name: "image",
           component: "image",
-          parse: (filename) => `../images/${filename}`,
+          parse: (filename) => {
+            console.log(filename)
+            return `../images/${filename}`
+          },
           uploadDir: () => `/content/images/`,
           previewSrc: (formValues, input) => {
             if (!formValues.jsonNode.hero || !formValues.jsonNode.hero.image)
